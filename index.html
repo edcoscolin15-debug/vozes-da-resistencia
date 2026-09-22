@@ -175,16 +175,31 @@
 
         /* Player de Áudio Customizado */
         .area-player {
-            background: var(--cor-fundo);
-            padding: 20px;
-            border-radius: 10px;
-            border-left: 5px solid var(--cor-primaria);
+            background: #fafafa; /* Um fundo um pouco mais claro para destacar */
+            padding: 25px;
+            border-radius: 12px;
+            border-left: 5px solid var(--cor-secundaria); /* Cor laranja para dar mais destaque */
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Centraliza o conteúdo horizontalmente */
+            box-shadow: inset 0 2px 5px rgba(0,0,0,0.05); /* Sombra interna sutil */
         }
         
         .area-player p {
             margin-top: 0;
+            margin-bottom: 15px;
             font-weight: bold;
             color: var(--cor-primaria);
+            font-size: 1.1rem;
+        }
+
+        .area-player iframe {
+            width: 100%;
+            max-width: 500px; /* Impede que o player fique esticado demais nas laterais */
+            height: 140px; /* Mais "aberto" para caber a interface do Google Drive perfeitamente */
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15); /* Sombra elegante no player */
+            background-color: white; /* Fundo branco caso a internet demore a carregar */
         }
 
     </style>
@@ -213,8 +228,8 @@
                 
                 <div class="area-player">
                     <p>▶️ Ouça o episódio:</p>
-                    <!-- Player adaptado para aceitar o Google Drive -->
-                    <iframe id="modal-audio" src="" width="100%" height="100" frameborder="0" allow="autoplay" style="border-radius: 8px; margin-top: 10px;"></iframe>
+                    <!-- Player adaptado e centralizado -->
+                    <iframe id="modal-audio" src="" frameborder="0" allow="autoplay"></iframe>
                 </div>
             </div>
         </div>
@@ -239,27 +254,27 @@
                 texto: `Maria Firmina dos Reis foi uma escritora negra brasileira do século XIX que, por meio de sua literatura, denunciou a escravidão e deu voz à população negra, tornando-se um importante símbolo da resistência e da diversidade étnica no Brasil. Ouça sua história, clicando no player abaixo.`,
                 linkDrive: "https://drive.google.com/file/d/1Ek-E-60YfM6Otpb-lElEVTifMwdlsiKj/view?usp=drive_link"
             },
-			{
+            {
                 nome: "Luiz Gama",
                 turma: "Entrevistado pelo 8º ano A",
                 imagem: "https://upload.wikimedia.org/wikipedia/commons/6/63/Luiz_Gama.jpg?utm_source=pt.wikipedia.org&utm_campaign=index&utm_content=original",
                 texto: `Vendido como escravizado pelo próprio pai, Luiz Gama alfabetizou-se aos 17 anos e tornou-se um brilhante advogado autodidata, jornalista e poeta. Ele usou as leis da época para libertar mais de 500 pessoas escravizadas nos tribunais. Ouça sua história, clicando no player abaixo.`,
                 linkDrive: "https://drive.google.com/file/d/1Ek-E-60YfM6Otpb-lElEVTifMwdlsiKj/view?usp=drive_link"
             },
-			{
+            {
                 nome: "Rosa Parks",
                 turma: "Entrevistado pelo 8º ano B",
                 imagem: "https://upload.wikimedia.org/wikipedia/commons/8/82/Rosa_Parks_%2813270402093%29_%28cropped%29.jpg?utm_source=pt.wikipedia.org&utm_campaign=imageinfo&utm_content=original",
                 texto: `Rosa Parks foi uma ativista negra norte-americana que enfrentou a segregação racial nos Estados Unidos e se tornou símbolo da resistência contra o racismo e da luta pelos direitos civis e pela igualdade. Ouça sua história, clicando no player abaixo.`,
                 linkDrive: "https://drive.google.com/file/d/1Ek-E-60YfM6Otpb-lElEVTifMwdlsiKj/view?usp=drive_link"
             },
-			{
+            {
                 nome: "Martin Luther King",
                 turma: "Entrevistado pelo 8º ano B",
                 imagem: "https://upload.wikimedia.org/wikipedia/commons/0/05/Martin_Luther_King%2C_Jr..jpg?utm_source=pt.wikipedia.org&utm_campaign=index&utm_content=original",
                 texto: `Martin Luther King Jr. foi um líder negro norte-americano que lutou contra a segregação racial e pelos direitos civis, defendendo a igualdade e a resistência ao racismo por meio da ação não violenta. Ouça sua história, clicando no player abaixo.`,
                 linkDrive: "https://drive.google.com/file/d/1Ek-E-60YfM6Otpb-lElEVTifMwdlsiKj/view?usp=drive_link"
-            },
+            }
         ];
 
         /* ================= SISTEMA DO SITE ================= */
